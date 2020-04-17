@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Covid-19 Dashboard</title>
+        <meta name="description" content="Covid19">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/fe77521a69.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="corona.css">
+        <script src="corona.js"></script>
+
+    </head>
+    <body>
+<h1 class="title">Covid-19 Tracker</h1>
+<div class="india container-fluid">
+<h2 class="subtitle">The Latest statistics of Corona Virus in India</h2>
+   <div class="row">
+       <div class="stats-containers col-md-6">
+    <div class="">
+        <h1 class="title">India</h1>
+        <div class="total col-md-12">
+            <h4>Total Cases</h4>
+            <h1 id="case"></h1>
+        </div>
+        <div class="active_deaths">
+            <div class="row">
+            <div class="col-4">
+                <h4> Active</h4>
+                <h1 id="currentlyactive"></h1>
+             </div>
+            <div class="col-4">
+                <h4>Death</h4>
+                <h1 id="deaths"></h1>
+             </div>
+             <div class="col-4">
+                <h4>Death</h4>
+                <h1 id="percentage"></h1>
+             </div>
+            </div>
+            <h4 id="lastupdatedtime" class="text-right"></h4>
+    </div>
+    </div>
+<div id="free_state" class="">
+    <h1 class="title">No Covid Regions </h1>
+</div>
+<div id="recov_state" class="">
+    <h1 class="title">Recovered without Casuality </h1>
+</div>
+<div id="recov_state1" class="">
+    <h1 class="title">Recovered with Casuality </h1>
+</div>
+</div>
+<div id="trends" class="stats-containers col-md-6">
+    <h1 class="title">Trends and some facts </h1>
+    <h6 id="updatetimestamp" class="text-right"></h6>
+    <h4>On Date +ve Reported</h4>
+    <h1 id="positivecasesfromsamplesreported"></h1>
+    <h4>Increase over yesterday</h4>
+    <h1 id="increaseoveryesterday"></h1>
+    <h4>Increase% over yesterday</h4>
+    <h1 id="increasepercentageoveryesterday"></h1>
+    <h4>Total Sample Tested</h4>
+    <h1 id="totalsamplestested"></h1>
+    <h4>Total Persons Tested</h4>
+    <h1 id="totalindividualstested"></h1>
+</div>
+</div>
+
+<div class="row">
+    <div id="trends" class="stats-containers col-md-4">
+        <h1 class="title">States having Highest Nos of Deaths </h1>
+        <h6 id="updatetimestamp" class="text-right"></h6>
+        <div class="top_3 row col-md-12">
+            <div id="top_3state" class="col-md-10 col-10"> </div>
+            <div id="top_3deathi" class="col-md-2 col-2"></div> 
+        </div>
+    </div>
+    <div id="trends" class="stats-containers col-md-8">
+    <h1 class="title">Highest  Rate( Nos in Per 100 Cases)</h1> 
+    <div class="row">
+        <div class="col-md-6">
+             <h1 class="title">Death Rate</h1> 
+             <div class="row justify-content-center">
+             <div id="top_3state1" class="col-md-9 col-9"></div>
+             <div id="top_3deathi1" class="col-md-3 col-3"></div>
+            </div>  </div>
+            <div class="col-md-6">
+                <h1 class="title">Recovery Rate</h1> 
+                <div class="row justify-content-center">
+                <div id="top_3state11" class="col-md-9 col-9"></div>
+                <div id="top_3deathi11" class="col-md-3 col-3"></div>
+</div>
+            </div>
+    </div>
+</div>
+
+</div>
+
+
+<div class="container-fluid">
+    <h1 class="title">More Statistics Covid-19</h1>
+    <div class="row">    <div class="col-md-6">
+        <h4>Cases in week</h4>
+        <h1 id="weekly"></h1>
+        <h4>Rate of cases in week (Nos/Day)</h4>
+        <h1 id="increaserateweekly"></h1>
+        <h4>Rate of cases in Previous week (Nos/Day)</h4>
+        <h1 id="increaseratelastweekly"></h1>
+        <h4>Increase% over Previous week</h4>
+        <h1 id="increasepercentageweekly"></h1>
+    </div>
+<div class="col-md-6">
+    <h4>SampleTested in week</h4>
+    <h1 id="testweekly"></h1>
+    <h4>Rate of test in week (Nos/Day)</h4>
+    <h1 id="testincreaserateweekly"></h1>
+    <h4>Rate of test in Previous week (Nos/Day)</h4>
+    <h1 id="testincreaseratelastweekly"></h1>
+    <h4>Increase% over Previous week</h4>
+    <h1 id="testincreasepercentageweekly"></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="world container-fluid">
+    <h2 class="subtitle">The Latest statistics of Corona Virus in World</h2>
+       <div class="row">
+        <div class="stats-containers col-md-5">
+            <h1 class="title">World</h1>
+            <div class="total col-md-12">
+                <h4>Total Cases</h4>
+                <h1 id="worldcase"></h1>
+            </div>
+            <div class="active_deaths">
+                <div class="row">
+                <div class="col-4">
+                    <h4> Active</h4>
+                    <h1 id="worldcurrentlyactive"></h1>
+                 </div>
+                <div class="col-4">
+                    <h4>Death</h4>
+                    <h1 id="worlddeaths"></h1>
+                 </div>
+                 <div class="col-4">
+                    <h4>Death</h4>
+                    <h1 id="worldpercentage"></h1>
+                 </div>
+                </div>
+                <h4 id="worldlastupdatedtime" class="text-right"></h4>
+        </div>
+    </div>
+
+       
+    
+    <div id="trends" class="stats-containers col-md-7">
+        <h1 class="title">Nations having Highest Nos of Deaths </h1>
+        <h6 id="worldtime" class="text-right"></h6>
+        <div class="top_3 row col-md-12">
+            <div id="top_3nation" class="col-md-10 col-10"> </div>
+            <div id="top_3deaths" class="col-md-2 col-2"></div> 
+        </div>
+    </div>
+    </div>
+    
+    <h1 class="title">Highest  Rate( Nos in Per 100 Cases)</h1> 
+    <div class="row">
+        <div class="col-md-4">
+             <h1 class="title">Death Rate</h1> 
+             <div class="row justify-content-center">
+             <div id="top_3nation1" class="col-md-9 col-9"></div>
+             <div id="top_3death1" class="col-md-3 col-3"></div>
+            </div>  </div>
+            <div class="col-md-8">
+                <h1 class="title">Recovery Rate</h1> 
+                <div class="row justify-content-center">
+                <div id="top_3nation11" class="col-md-9 col-9"></div>
+                <div id="top_3death11" class="col-md-3 col-3"></div>
+
+            </div>
+    </div>
+</div>
+
+
+
+    <div id="worldfree_state" class="stats-containers col-12">
+        <h2 class="title">No Covid Regions </h2>
+       <div class="row"> <h3 class="col-md-3">Covid-19 Free Zone   &nbsp; &nbsp;</h3> <h4 class="col-md-2" id="worldfree"></h4></div>
+        <a href=""></a>
+    </div>
+    </div>
+<h6 id="footer">Source <strong>API Data has been taken from:  <a href="https://www.covid19india.org/">Covid19India</a></strong></h6>
+
+
+
+    </body>
+</html>

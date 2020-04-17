@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 95%;
+  box-sizing: border-box;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.india,
+.world {
+  padding-top: 30px;
+  margin-top: 30px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "poppins", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 5px;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
+h4 {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.title {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  padding: 5px;
+}
+.subtitle {
+  padding: 2px;
+  color: darkblue;
+}
+
+.stats-container {
+  border: 2px solid #fcb47b;
+}
+
+#free_state h2 {
+  color: rgb(87, 148, 3) !important;
+}
+#recov_state h2 {
+  color: rgb(247, 7, 195);
+}
+
+#recov_state1 h2 {
+  color: rgb(119, 150, 9);
+}
+
+#worldfree::before {
+  content: "";
+  width: 10px;
+  height: 20px;
+  background-color: green;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+#top_3nation1 h4,
+#top_3nation11 h4,
+#top_3nation h4,
+#top_3state h4,
+#top_3state1 h4,
+#top_3state11 h4 {
+  padding: 5px 0;
+}
+#top_3death1 h4,
+#top_3death11 h4,
+#top_3death h4,
+#top_3death h4,
+#top_3death1 h4,
+#top_3death11 h4 {
+  padding: 5px 0;
+}
+
+#worldfree a::first-letter {
+  text-transform: capitalize !important;
+  font-size: larger !important;
+}
