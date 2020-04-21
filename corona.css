@@ -94,3 +94,22 @@ h4 {
   text-transform: capitalize !important;
   font-size: larger !important;
 }
+.case_trends{text-align: center;}
+.case_trends a{
+  padding: 10px 15px;
+  font-size: 1.5rem!important;
+  font-weight: 800;
+ color:red;
+}
+/* .case_trends a:last-child{
+  padding: 0px;
+} */
+
+.top_5 .col-3 h4{
+  font-size: 1.3rem;
+  color: #642c02;
+}
+.top_5 .col-2 h2{
+  font-size: 1.2rem;
+  padding: 1px;
+}

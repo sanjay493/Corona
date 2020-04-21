@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
@@ -8,7 +9,7 @@
         <script src="https://kit.fontawesome.com/fe77521a69.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="corona.css">
-        <script src="corona.js"></script>
+    <script src="corona1.js"></script>
 
     </head>
     <body>
@@ -25,20 +26,35 @@
         </div>
         <div class="active_deaths">
             <div class="row">
-            <div class="col-4">
+            <div class="col-3">
                 <h4> Active</h4>
                 <h1 id="currentlyactive"></h1>
              </div>
-            <div class="col-4">
+            <div class="col-2">
                 <h4>Death</h4>
                 <h1 id="deaths"></h1>
              </div>
-             <div class="col-4">
+             <div class="col-3">
                 <h4>Death</h4>
                 <h1 id="percentage"></h1>
              </div>
+             <div class="col-3">
+                <h4>Recovery</h4>
+                <h1 id="recovery"></h1>
+             </div>
             </div>
             <h4 id="lastupdatedtime" class="text-right"></h4>
+            <h1>Weekly Tends</h1>
+            <div class="row">
+                <div class="col-6">
+                    <h4>Recover Trend</h4>
+                    <h1 id="recovertrend"></h1>
+                 </div>
+                 <div class="col-6">
+                    <h4>Death Trend</h4>
+                    <h1 id="deathtrend"></h1>
+                 </div>
+            </div>
     </div>
     </div>
 <div id="free_state" class="">
@@ -54,6 +70,8 @@
 <div id="trends" class="stats-containers col-md-6">
     <h1 class="title">Trends and some facts </h1>
     <h6 id="updatetimestamp" class="text-right"></h6>
+    <h4>Last Five Days +ve cases Reported </h4>
+    <div id="case_trends" class="case_trends"> </div>
     <h4>On Date +ve Reported</h4>
     <h1 id="positivecasesfromsamplesreported"></h1>
     <h4>Increase over yesterday</h4>
@@ -68,37 +86,21 @@
 </div>
 
 <div class="row">
-    <div id="trends" class="stats-containers col-md-4">
-        <h1 class="title">States having Highest Nos of Deaths </h1>
+    <div id="trends" class="stats-containers col-md-12">
+        <h1 class="title">States having Highest Nos of Active Cases </h1>
         <h6 id="updatetimestamp" class="text-right"></h6>
-        <div class="top_3 row col-md-12">
-            <div id="top_3state" class="col-md-10 col-10"> </div>
-            <div id="top_3deathi" class="col-md-2 col-2"></div> 
+        <div class="top_5 row col-md-12" id="top_5">
+            <div class=col-3><h4>State</h4></div><div class="col-2"><h2>Active</h2></div><div class="col-2"><h2>Confirm</h2></div><div class="col-2"><h2>Deaths</h2></div><div class=col-2><h2>Recover</h2></div>
         </div>
     </div>
-    <div id="trends" class="stats-containers col-md-8">
+    <div id="trends" class="stats-containers col-md-12">
     <h1 class="title">Highest  Rate( Nos in Per 100 Cases)</h1> 
     <div class="row">
-        <div class="col-md-6">
-             <h1 class="title">Death Rate</h1> 
-             <div class="row justify-content-center">
-             <div id="top_3state1" class="col-md-9 col-9"></div>
-             <div id="top_3deathi1" class="col-md-3 col-3"></div>
-            </div>  </div>
-            <div class="col-md-6">
-                <h1 class="title">Recovery Rate</h1> 
-                <div class="row justify-content-center">
-                <div id="top_3state11" class="col-md-9 col-9"></div>
-                <div id="top_3deathi11" class="col-md-3 col-3"></div>
-</div>
-            </div>
+    <div class="trend_rate col-md-6" id="trend_rate_recover"></div>
+<div class="trend_rate col-md-6" id="trend_rate_death"></div>
+            </div></div>
     </div>
-</div>
 
-</div>
-
-
-<div class="container-fluid">
     <h1 class="title">More Statistics Covid-19</h1>
     <div class="row">    <div class="col-md-6">
         <h4>Cases in week</h4>
@@ -123,7 +125,7 @@
 </div>
 </div>
 </div>
-
+</div>
 <div class="world container-fluid">
     <h2 class="subtitle">The Latest statistics of Corona Virus in World</h2>
        <div class="row">
