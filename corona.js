@@ -1,8 +1,12 @@
 
 window.onload = function () {
     covid19();
-    //covid19world();
+    covid19world();
+
   };
+
+  
+
   let totalIndia =[
                {
                         active: "14493",
