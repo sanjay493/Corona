@@ -142,7 +142,7 @@ window.onload = function () {
                {
                    let indexNo =stateActive.indexOf(tempArray[$i]);
                 let x=document.getElementById("top_5");
-               x.innerHTML+='<div class=\"col-3\"><h4>'+stateName[indexNo]+'</h4></div><div class=\"col-2\"><h2>'+stateActive[indexNo]+'</h2></div><div class=\"col-2\"><h2>'+stateDeath[indexNo]+'</h2></div><div class=\"col-2\"><h2>'+stateRecovered[indexNo]+'</h2></div>';
+               x.innerHTML+='<div class=\"col-3\"><h4>'+stateName[indexNo]+'</h4></div><div class=\"col-3\"><h2>'+stateActive[indexNo]+'</h2></div><div class=\"col-3\"><h2>'+stateDeath[indexNo]+'</h2></div><div class=\"col-3\"><h2>'+stateRecovered[indexNo]+'</h2></div>';
                }
 
  
